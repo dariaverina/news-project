@@ -1,0 +1,42 @@
+{
+    "name": "octobercms",
+    "homepage": "https://octobercms.com/",
+    "description": "October CMS is a self-hosted CMS platform based on the Laravel PHP Framework.",
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "production": "mix --production"
+    },
+    "devDependencies": {
+        "babel-plugin-module-resolver": "^4.1.0",
+        "laravel-mix": "^6.0.39",
+        "less": "^4.1.2",
+        "less-loader": "^10.2.0",
+        "sass": "^1.45.0",
+        "sass-loader": "^12.1.0"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.7",
+        "bluebird": "^3.7.2",
+        "bootstrap": "^5.3.3",
+        "bootstrap-icons": "^1.10",
+        "chart.js": "^4.3.2",
+        "chartjs-adapter-moment": "^1.0.1",
+        "dropzone": "^6.0.0-beta.2",
+        "emmet-monaco-es": "^5.3",
+        "jquery": "^3.6.0",
+        "js-cookie": "^3.0.1",
+        "moment": "^2.30.1",
+        "moment-timezone": "^0.5.46",
+        "monaco-editor": "^0.46.0",
+        "monaco-yaml": "^5.1.1",
+        "popper.js": "^1.16.1",
+        "sortablejs": "^1.15.0",
+        "vue": "^2.6.14",
+        "vue-router": "^3.5.3"
+    }
+}

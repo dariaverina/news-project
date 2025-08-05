@@ -1,0 +1,54 @@
+<div class="element-footer {{ blueFooterStyle|default(false) ? 'footer-bluezone' }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="footer-brand">
+                    <img src="{{ 'assets/images/logo.svg'|theme }}" alt="October CMS Demo" width="270" />
+                </div>
+                <div class="footer-nav">
+                    {% partial 'site/nav-footer' %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="footer-social">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://dribbble.com/" target="_blank">
+                                <img src="{{ 'assets/images/social-icons-white/dribbble-white.png'|theme }}" alt="Dribbble"  />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://www.linkedin.com/company/october-cms/" target="_blank">
+                                <img src="{{ 'assets/images/social-icons-white/linkedin-white.png'|theme }}" alt="LinkedIn"  />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://twitter.com/octobercms" target="_blank">
+                                <img src="{{ 'assets/images/social-icons-white/twitter-white.png'|theme }}" alt="Twitter" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://www.facebook.com/octobercms" target="_blank">
+                                <img src="{{ 'assets/images/social-icons-white/facebook-white.png'|theme }}" alt="Facebook" />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="footer-copyright">
+                    <p>&copy; {{ "now"|date("Y") }} Your Company Name</p>
+                    <p>All rights reserved</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-decoration-1"></div>
+        <div class="footer-decoration-2"></div>
+    </div>
+</div>
+
+{% partial 'site/modals/alert-dialog' %}
+{% partial 'site/modals/password-dialog' %}
+{% partial 'site/modals/ajax-modal' %}

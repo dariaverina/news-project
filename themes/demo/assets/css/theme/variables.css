@@ -1,0 +1,32 @@
+/*
+ * CSS Variables
+ */
+:root {
+    /* Common */
+    --bs-body-line-height: 1.7;
+    --bs-body-color: #343F52;
+
+    /* Brands */
+    --bs-brand-primary: #3097d1;
+    --bs-brand-info: #8eb4cb;
+    --bs-brand-success: #4eb76e;
+    --bs-brand-warning: #cbb956;
+    --bs-brand-danger:  #bf5329;
+    --bs-brand-accent: #6A6CF7;
+
+    /* Typography */
+    --bs-body-color: #586667;
+    --bs-border-radius: 4px;
+
+    /* Jumbotron */
+    --jumbotron-padding: 40px;
+    --jumbotron-bg: transparent;
+    --jumbotron-color: #34495E;
+    --jumbotron-font-size: 20px;
+    --jumbotron-heading-font-size: 65px;
+    --jumbotron-heading-color: #2C3E4F;
+
+
+    /* Forms */
+    --input-border-color: #D7D7D7;
+}

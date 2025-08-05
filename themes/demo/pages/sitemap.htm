@@ -1,0 +1,59 @@
+##
+title = "Sitemap"
+url = "/sitemap.xml"
+
+[resources]
+headers[Content-Type] = 'application/xml'
+
+[section sitemap]
+handle = "Site\Menus"
+identifier = "slug"
+value = "sitemap"
+==
+{#- Look for a specific blueprint code/slug -#}
+{% if sitemap is empty %}
+    {% do abort(500, "A menu definition with code 'sitemap' was not found. Please create this menu in the Admin Panel using the Content → Menus page.") %}
+{% endif %}
+
+{#- Function to render a sitemap item, including children -#}
+{% macro render_sitemap_item(item, reference, isRoot) %}
+    {% import _self as nav %}
+    {% set hideRootItem = isRoot and item.replace %}
+    {% if reference.url and not hideRootItem %}
+        <url>
+            <loc>{{ reference.url }}</loc>
+            <lastmod>{{ reference.mtime|date('c') }}</lastmod>
+            <changefreq>{{ item.changefreq }}</changefreq>
+            <priority>{{ item.priority }}</priority>
+
+            {#- Multisite implementation -#}
+            {% if reference.sites %}
+                {% for site in reference.sites %}
+                    <xhtml:link rel="alternative" hreflang="{{ site.locale }}" href="{{ site.url }}" />
+                {% endfor %}
+            {% endif %}
+        </url>
+    {% endif %}
+
+    {#- Render child items -#}
+    {% if reference.items %}
+        {% for child in reference.items %}
+            {{ nav.render_sitemap_item(item, child) }}
+        {% endfor %}
+    {% endif %}
+{% endmacro %}
+{% import _self as nav %}
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xhtml="https://www.w3.org/1999/xhtml"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+    {% for item in sitemap.sitemap_items %}
+        {{ nav.render_sitemap_item(
+            item,
+            link(item.reference, { nesting: item.nesting, sites: true }),
+            true
+        ) }}
+    {% endfor %}
+</urlset>

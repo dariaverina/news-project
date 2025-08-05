@@ -1,0 +1,127 @@
+/* Default Layout (All pages) */
+#layout-header {
+    &, &.navbar {
+        background: linear-gradient(102.01deg, #DB6A26 0.3%, #DBB326 106.31%);
+    }
+
+    .header-extra {
+        color: #fff;
+        padding-top: 40px;
+        padding-bottom: 50px;
+
+        h1 {
+            font-size: 60px;
+        }
+        p.lead {
+            font-size: 22px;
+        }
+    }
+}
+
+#layout-header .navbar {
+    min-height: 155px;
+
+    > .navbar-container.container {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+#layout-nav-decorations {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    height: 150px;
+
+    /* Decorations */
+    .navbar-decorations {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar-decoration-1,
+    .navbar-decoration-2 {
+        content: '';
+        border-radius: 100%;
+        background-color: #F4F7F8;
+        display: block;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .navbar-decoration-1 {
+        width: 524px;
+        height: 524px;
+        left: -105px;
+        top: -420px;
+        opacity: .04;
+    }
+
+    .navbar-decoration-2 {
+        width: 524px;
+        height: 524px;
+        left: 548px;
+        top: -385px;
+        opacity: .05;
+    }
+}
+
+#layout-content {
+    padding-top: 30px;
+    background: #fff;
+
+    header {
+        padding: 0 0 30px 0;
+    }
+
+    main.header-flush {
+        margin-top: -30px;
+    }
+}
+
+ul.list-with-ticks {
+    padding: 0;
+
+    li {
+        list-style: none;
+        position: relative;
+        padding-left: 23px;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: url('../../images/icons/icon-tick.png') no-repeat 0 0;
+            background-size: 15px 15px;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+html[data-turbo-preview] .fade-in-content {
+    opacity: 0;
+}
+
+html:not([data-turbo-preview]) .fade-in-content {
+    animation: fadeIn 0.15s ease-in-out;
+}

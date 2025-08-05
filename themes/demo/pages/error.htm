@@ -1,0 +1,16 @@
+title = "Error Page (500)"
+url = "/error"
+layout = "default"
+
+[resources]
+css[] = "pages/404.css"
+==
+{% put meta %}
+    <meta name="turbo-visit-control" content="error">
+{% endput %}
+<div class="container page-404">
+    <div class="banner-404">
+        <h1>Error</h1>
+        <p>We're sorry, but something went wrong and the page cannot be displayed.</p>
+    </div>
+</div>

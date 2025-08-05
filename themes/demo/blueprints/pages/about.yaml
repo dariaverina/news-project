@@ -1,0 +1,14 @@
+uuid: a63fabaf-7c0b-4c74-b36f-7abf1a3ad1c1
+handle: Page\About
+type: single
+name: About Page
+drafts: true
+
+navigation:
+    icon: icon-rocket
+    order: 200
+
+fields:
+    _block_builder:
+        type: mixin
+        source: Fields\Blocks

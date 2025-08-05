@@ -1,0 +1,11 @@
+/* Bootstrap */
+@import "../vendor/bootstrap/bootstrap.css";
+@import "../vendor/bootstrap-icons/bootstrap-icons.css";
+
+/* Slick Carousel */
+@import "../vendor/slick-carousel/slick.css";
+@import "../vendor/slick-carousel/slick-theme.css";
+
+/* Photoswipe */
+@import "../vendor/photoswipe/photoswipe.css";
+@import "../vendor/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css";
