@@ -39,4 +39,14 @@ class Plugin extends PluginBase
             ],
         ];
     }
+    public function boot()
+    {
+        \Route::group(['prefix' => 'api/news', 'middleware' => ['api']], function () {
+            \Route::get('/', [\RtNews\NewsModule\Controllers\ApiNewsController::class, 'index']);
+            \Route::get('/{slug}', [\RtNews\NewsModule\Controllers\ApiNewsController::class, 'show']);
+            \Route::post('/', [\RtNews\NewsModule\Controllers\ApiNewsController::class, 'store']);
+            \Route::put('/{id}', [\RtNews\NewsModule\Controllers\ApiNewsController::class, 'update']);
+            \Route::delete('/{id}', [\RtNews\NewsModule\Controllers\ApiNewsController::class, 'destroy']);
+        });
+    }
 }
