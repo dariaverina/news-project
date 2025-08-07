@@ -114,6 +114,7 @@ return [
 
         // Core Service Provider
         System\ServiceProvider::class,
+        Illuminate\Auth\AuthServiceProvider::class,
 
         // Package Service Providers...
         // Illuminate\Html\HtmlServiceProvider::class, // Example
