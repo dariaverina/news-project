@@ -88,4 +88,4 @@ Backend — October CMS с PostgreSQL, frontend — SPA на Vue 3 с Pinia и V
 
 ## Контакты
 
-По вопросам проекта пишите: [ваш_email@example.com]
+По вопросам проекта пишите: [[@dariaverinaa](https://t.me/dariaverinaa)]
