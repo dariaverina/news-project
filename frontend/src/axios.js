@@ -1,15 +1,10 @@
 import axios from 'axios'
 
-const instance = axios.create({
-  baseURL: 'http://localhost:8000/api',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-})
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
-const token = localStorage.getItem('token')
-if (token) {
-  instance.defaults.headers.common['Authorization'] = `Bearer ${token}`
-}
+const instance = axios.create({
+  baseURL: `${API_BASE_URL}/api`,
+  withCredentials: true,
+})
 
 export default instance
