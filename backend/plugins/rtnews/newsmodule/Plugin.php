@@ -39,8 +39,15 @@ class Plugin extends PluginBase
             ],
         ];
     }
+    public function registerMiddleware()
+    {
+        $this->app['router']->aliasMiddleware('cors', \RtNews\NewsModule\Middleware\CorsMiddleware::class);
+    }
     public function boot()
     {
+        $this->registerMiddleware();
+        $this->app['router']->pushMiddlewareToGroup('api', 'cors');
+
         \Route::group(['prefix' => 'api/news', 'middleware' => ['api']], function () {
             \Route::get('/', [\RtNews\NewsModule\Controllers\ApiNewsController::class, 'index']);
             \Route::get('/{slug}', [\RtNews\NewsModule\Controllers\ApiNewsController::class, 'show']);
