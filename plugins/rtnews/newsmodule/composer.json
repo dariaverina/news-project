@@ -1,0 +1,14 @@
+{
+    "name": "rtnews/newsmodule-plugin",
+    "type": "october-plugin",
+    "description": "Test task for Rostelecom",
+    "require": {
+        "composer/installers": "^1.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "RtNews\\NewsModule\\": ""
+        }
+    }
+
+}

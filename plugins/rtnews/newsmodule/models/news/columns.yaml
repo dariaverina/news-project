@@ -1,0 +1,20 @@
+columns:
+    id:
+        label: ID
+        searchable: true
+        sortable: true
+
+    title:
+        label: Name
+        searchable: true
+        sortable: true
+
+    slug:
+        label: Slug
+        searchable: true
+        sortable: true
+
+    is_published:
+        label: Is Published
+        type: switch
+        sortable: true

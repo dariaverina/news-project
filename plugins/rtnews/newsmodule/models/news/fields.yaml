@@ -1,0 +1,27 @@
+fields:
+    title:
+        label: Name
+        type: text
+        required: true
+
+    slug:
+        label: Slug
+        type: text
+        preset:
+            field: title
+            type: slug
+
+    content:
+        label: Content
+        type: textarea
+        size: large
+
+    is_published:
+        label: Is Published
+        type: switch
+        default: false
+
+    published_at:
+        label: Published at
+        type: datepicker
+        mode: datetime

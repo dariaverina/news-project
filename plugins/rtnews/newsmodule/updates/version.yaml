@@ -1,0 +1,3 @@
+v1.0.1: 
+  - Migrations
+  - 2025_08_06_create_news_table.php

@@ -1,0 +1,12 @@
+name: News
+form: $/rtnews/newsmodule/models/news/fields.yaml
+modelClass: RtNews\NewsModule\Models\News
+defaultRedirect: rtnews/newsmodule/news
+create:
+    title: backend::lang.form.create_title
+    redirect: rtnews/newsmodule/news/update/:id
+    redirectClose: rtnews/newsmodule/news
+update:
+    title: backend::lang.form.update_title
+    redirect: rtnews/newsmodule/news
+    redirectClose: rtnews/newsmodule/news

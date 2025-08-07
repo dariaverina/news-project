@@ -1,0 +1,10 @@
+list: $/rtnews/newsmodule/models/news/columns.yaml
+modelClass: RtNews\NewsModule\Models\News
+title: Manage News
+recordUrl: rtnews/newsmodule/news/update/:id
+noRecordsMessage: backend::lang.list.no_records
+recordsPerPage: 20
+showPageNumbers: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
